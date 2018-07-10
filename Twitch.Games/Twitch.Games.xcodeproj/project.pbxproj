@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F10FACDE20F4452D009A876E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FACDD20F4452D009A876E /* AppDelegate.swift */; };
-		F10FACE020F4452D009A876E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FACDF20F4452D009A876E /* ViewController.swift */; };
 		F10FACE320F4452D009A876E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10FACE120F4452D009A876E /* Main.storyboard */; };
 		F10FACE620F4452D009A876E /* Twitch_Games.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F10FACE420F4452D009A876E /* Twitch_Games.xcdatamodeld */; };
 		F10FACE820F4452F009A876E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F10FACE720F4452F009A876E /* Assets.xcassets */; };
 		F10FACEB20F4452F009A876E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F10FACE920F4452F009A876E /* LaunchScreen.storyboard */; };
 		F10FACF620F4452F009A876E /* Twitch_GamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FACF520F4452F009A876E /* Twitch_GamesTests.swift */; };
 		F10FAD0120F4452F009A876E /* Twitch_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD0020F4452F009A876E /* Twitch_GamesUITests.swift */; };
+		F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1220F447A9009A876E /* GamesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		F10FACDA20F4452D009A876E /* Twitch.Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.Games.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10FACDD20F4452D009A876E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F10FACDF20F4452D009A876E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F10FACE220F4452D009A876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F10FACE520F4452D009A876E /* Twitch_Games.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Twitch_Games.xcdatamodel; sourceTree = "<group>"; };
 		F10FACE720F4452F009A876E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		F10FACFC20F4452F009A876E /* Twitch.GamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Twitch.GamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10FAD0020F4452F009A876E /* Twitch_GamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitch_GamesUITests.swift; sourceTree = "<group>"; };
 		F10FAD0220F4452F009A876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F10FAD1220F447A9009A876E /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +99,11 @@
 		F10FACDC20F4452D009A876E /* Twitch.Games */ = {
 			isa = PBXGroup;
 			children = (
+				F10FAD1120F4472F009A876E /* Helpers */,
+				F10FAD1020F4472A009A876E /* View */,
+				F10FAD0F20F44721009A876E /* Model */,
+				F10FAD0E20F44704009A876E /* Controllers */,
 				F10FACDD20F4452D009A876E /* AppDelegate.swift */,
-				F10FACDF20F4452D009A876E /* ViewController.swift */,
 				F10FACE120F4452D009A876E /* Main.storyboard */,
 				F10FACE720F4452F009A876E /* Assets.xcassets */,
 				F10FACE920F4452F009A876E /* LaunchScreen.storyboard */,
@@ -126,6 +129,35 @@
 				F10FAD0220F4452F009A876E /* Info.plist */,
 			);
 			path = Twitch.GamesUITests;
+			sourceTree = "<group>";
+		};
+		F10FAD0E20F44704009A876E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F10FAD1220F447A9009A876E /* GamesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F10FAD0F20F44721009A876E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F10FAD1020F4472A009A876E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F10FAD1120F4472F009A876E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F10FACE020F4452D009A876E /* ViewController.swift in Sources */,
 				F10FACDE20F4452D009A876E /* AppDelegate.swift in Sources */,
+				F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */,
 				F10FACE620F4452D009A876E /* Twitch_Games.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
