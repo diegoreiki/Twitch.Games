@@ -1,5 +1,5 @@
 # Twitch.Games
-Projeto para listagem do últimos jogos do Twitch <br /><br />
+Projeto para listagem dos últimos jogos do Twitch <br /><br />
 
 # Instalação
 Para executar o projeto em modo de desenvolvimento, é necessário ter o Cocoapods instalado:<br />
