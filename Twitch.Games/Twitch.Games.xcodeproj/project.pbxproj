@@ -20,6 +20,8 @@
 		F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1220F447A9009A876E /* GamesViewController.swift */; };
 		F10FAD1520F44E2D009A876E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1420F44E2D009A876E /* Constants.swift */; };
 		F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1620F44FC3009A876E /* Extensions.swift */; };
+		F10FAD1920F450D6009A876E /* TopGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1820F450D6009A876E /* TopGames.swift */; };
+		F10FAD1B20F450F0009A876E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1A20F450F0009A876E /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		F10FAD1220F447A9009A876E /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		F10FAD1420F44E2D009A876E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F10FAD1620F44FC3009A876E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F10FAD1820F450D6009A876E /* TopGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGames.swift; sourceTree = "<group>"; };
+		F10FAD1A20F450F0009A876E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FC0BBEEAD4ABD59AD02B827E /* Pods-Twitch.GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch.GamesTests/Pods-Twitch.GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,8 @@
 		F10FAD0F20F44721009A876E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F10FAD1820F450D6009A876E /* TopGames.swift */,
+				F10FAD1A20F450F0009A876E /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,9 +428,11 @@
 			files = (
 				F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */,
 				F10FACDE20F4452D009A876E /* AppDelegate.swift in Sources */,
+				F10FAD1B20F450F0009A876E /* Game.swift in Sources */,
 				F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */,
 				F10FACE620F4452D009A876E /* Twitch_Games.xcdatamodeld in Sources */,
 				F10FAD1520F44E2D009A876E /* Constants.swift in Sources */,
+				F10FAD1920F450D6009A876E /* TopGames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
