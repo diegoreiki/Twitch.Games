@@ -11,4 +11,16 @@ extension UIViewController{
         
         self.navigationItem.titleView = viewTitle;
     }
+    
+    func alert(title: String, message: String, view: UIViewController, callback: (() -> Void)?){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert);
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
+            if callback != nil{
+                callback!();
+            }
+        });
+        DispatchQueue.main.async {
+            view.present(alert, animated: true, completion: nil);
+        }
+    }    
 }
