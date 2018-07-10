@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class FavoriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate {
+class FavoriteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
     //MARK: Property
     var context:NSManagedObjectContext{
@@ -67,5 +67,16 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.imageGame.clipsToBounds = false;
         cell.imageGame.contentMode = .top;        
         return cell;
-    }     
+    }   
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.bounds.width/2.1;
+        let itemHeight = itemWidth;
+        
+        return CGSize(width: itemWidth, height: itemHeight);
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1);
+    }    
 }
