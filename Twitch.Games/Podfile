@@ -6,6 +6,7 @@ target 'Twitch.Games' do
   use_frameworks!
 
   # Pods for Twitch.Games
+  pod "AlamofireObjectMapper"
 
   target 'Twitch.GamesTests' do
     inherit! :search_paths

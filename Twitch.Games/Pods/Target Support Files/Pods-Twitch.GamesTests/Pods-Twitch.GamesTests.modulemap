@@ -1,0 +1,6 @@
+framework module Pods_Twitch_GamesTests {
+  umbrella header "Pods-Twitch.GamesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
