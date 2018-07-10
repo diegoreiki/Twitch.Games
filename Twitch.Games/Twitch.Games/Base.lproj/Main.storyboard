@@ -73,6 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="adA-jW-HED"/>
+                    <connections>
+                        <outlet property="collectionViewTopGames" destination="mYc-hz-Bxw" id="djP-Oj-OZn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
