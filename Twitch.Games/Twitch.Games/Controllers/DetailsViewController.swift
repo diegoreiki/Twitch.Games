@@ -19,10 +19,15 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         setupDetailsGame();
+
+        let buttonFavorite = UIButton(type: .custom);
+        buttonFavorite.addTarget(self, action: #selector(addFavorite), for: .touchUpInside);
+        buttonFavorite.setImage(UIImage (named: "FavoriteOff"), for: .normal);
+        buttonFavorite.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0);
         
-        let buttonFavorite = UIBarButtonItem(image: UIImage(named: "FavoriteOn"), style: .plain, target: self, action: #selector(addFavorite));
-        self.navigationItem.rightBarButtonItem  = buttonFavorite;
-    }
+        let barButtonFavorite = UIBarButtonItem(customView: buttonFavorite)
+        self.navigationItem.rightBarButtonItems = [barButtonFavorite];       
+    } 
     
     //MARK: Methods
     @objc func addFavorite() {
