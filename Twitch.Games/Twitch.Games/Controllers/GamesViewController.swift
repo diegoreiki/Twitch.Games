@@ -66,11 +66,38 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     //MARK: Delegate UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0;
+        return self.games.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: " ", for: indexPath);
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellGame", for: indexPath) as! GameCollectionViewCell;
+        let imageURL = URL(string: (self.games[indexPath.row].game?.image?.medium)!);
+        let imageData = NSData(contentsOf: imageURL!);
+        cell.imageGame.image = UIImage(data: imageData! as Data);
+        cell.imageGame.clipsToBounds = false;
+        cell.imageGame.contentMode = .top;
+        
         return cell;
-    }    
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.bounds.width/2.1;
+        let itemHeight = itemWidth;
+        
+        return CGSize(width: itemWidth, height: itemHeight);
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1);
+    }
+    
+
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+        let lastCell = games.count - 1;
+        
+        if indexPath.row == lastCell {
+            self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id);
+        }
+    }   
 }

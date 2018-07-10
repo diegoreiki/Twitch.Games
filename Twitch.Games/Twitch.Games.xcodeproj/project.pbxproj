@@ -22,6 +22,7 @@
 		F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1620F44FC3009A876E /* Extensions.swift */; };
 		F10FAD1920F450D6009A876E /* TopGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1820F450D6009A876E /* TopGames.swift */; };
 		F10FAD1B20F450F0009A876E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1A20F450F0009A876E /* Game.swift */; };
+		F10FAD1D20F455EF009A876E /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1C20F455EF009A876E /* GameCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F10FAD1620F44FC3009A876E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F10FAD1820F450D6009A876E /* TopGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGames.swift; sourceTree = "<group>"; };
 		F10FAD1A20F450F0009A876E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F10FAD1C20F455EF009A876E /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC0BBEEAD4ABD59AD02B827E /* Pods-Twitch.GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch.GamesTests/Pods-Twitch.GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 		F10FAD1020F4472A009A876E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F10FAD1C20F455EF009A876E /* GameCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10FAD1D20F455EF009A876E /* GameCollectionViewCell.swift in Sources */,
 				F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */,
 				F10FACDE20F4452D009A876E /* AppDelegate.swift in Sources */,
 				F10FAD1B20F450F0009A876E /* Game.swift in Sources */,
