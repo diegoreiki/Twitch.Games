@@ -35,7 +35,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         getLastTopGames();
         activityLoading.startAnimating();
         activityLoading.hidesWhenStopped = true;
-    }    
+    }  
     
     //MARK: Methods
     @objc func refreshControl() {
