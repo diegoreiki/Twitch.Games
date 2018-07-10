@@ -74,6 +74,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="adA-jW-HED"/>
                     <connections>
+                        <outlet property="activityLoading" destination="nmh-TT-us4" id="0jp-DF-ENZ"/>
                         <outlet property="collectionViewTopGames" destination="mYc-hz-Bxw" id="djP-Oj-OZn"/>
                     </connections>
                 </viewController>
