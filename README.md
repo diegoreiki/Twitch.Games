@@ -7,9 +7,10 @@ Para executar o projeto em modo de desenvolvimento, é necessário ter o Cocoapo
 - pod install <br />
 - twitch.game.xcworkspace<br /><br />
 
-# Bibliotecas (Cocoapods):
+# Bibliotecas:
+- Core Data
 - Alamofire
-- ObjectMappper
+- Object Mappper
 
 # Autor:
 Diego Silva Costa Pereira <br />
