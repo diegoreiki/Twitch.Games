@@ -19,6 +19,7 @@
 		F10FAD0120F4452F009A876E /* Twitch_GamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD0020F4452F009A876E /* Twitch_GamesUITests.swift */; };
 		F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1220F447A9009A876E /* GamesViewController.swift */; };
 		F10FAD1520F44E2D009A876E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1420F44E2D009A876E /* Constants.swift */; };
+		F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1620F44FC3009A876E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		F10FAD0220F4452F009A876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F10FAD1220F447A9009A876E /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		F10FAD1420F44E2D009A876E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F10FAD1620F44FC3009A876E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FC0BBEEAD4ABD59AD02B827E /* Pods-Twitch.GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch.GamesTests/Pods-Twitch.GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F10FAD1420F44E2D009A876E /* Constants.swift */,
+				F10FAD1620F44FC3009A876E /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */,
 				F10FACDE20F4452D009A876E /* AppDelegate.swift in Sources */,
 				F10FAD1320F447A9009A876E /* GamesViewController.swift in Sources */,
 				F10FACE620F4452D009A876E /* Twitch_Games.xcdatamodeld in Sources */,
