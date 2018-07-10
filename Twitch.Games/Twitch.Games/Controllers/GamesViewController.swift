@@ -108,5 +108,11 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         if indexPath.row == lastCell {
             self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id);
         }
-    }   
+    } 
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsGame") as! DetailsViewController;
+        viewController.games = self.games[indexPath.row]
+        self.navigationController?.pushViewController(viewController, animated: true);
+    }    
 }

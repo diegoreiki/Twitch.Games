@@ -83,7 +83,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.2" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1735" y="33"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="S7P-S7-MQP">
+            <objects>
+                <viewController storyboardIdentifier="detailsGame" id="Agd-MH-Gpz" customClass="DetailsViewController" customModule="Twitch_Games" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MXO-B1-DH0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="g68-3i-hXt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4jX-xG-Rgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="33"/>
         </scene>
         <!--Item-->
         <scene sceneID="vC0-2s-X2x">
@@ -102,7 +117,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgd-7E-s4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="32.833583208395808"/>
+            <point key="canvasLocation" x="951" y="33"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UNU-Nh-KRb">
