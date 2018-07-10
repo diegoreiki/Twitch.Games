@@ -20,6 +20,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         super.viewDidLoad()
         logoInNavigation();
         
+        getLastTopGames();
         self.collectionViewTopGames.delegate = self;
         self.collectionViewTopGames.dataSource = self;  
         
@@ -32,7 +33,6 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true);
         
-        getLastTopGames();
         activityLoading.startAnimating();
         activityLoading.hidesWhenStopped = true;
     }  
