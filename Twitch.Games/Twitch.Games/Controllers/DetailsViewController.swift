@@ -1,9 +1,16 @@
 import UIKit
+import CoreData
 
 class DetailsViewController: UIViewController {
     
     //MARK: Property   
+    var context:NSManagedObjectContext{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
+        return appDelegate.persistentContainer.viewContext;
+    }     
     var games: Games?;
+    
+    //MARK: IBOutlet
     @IBOutlet weak var imageGame: UIImageView!;
     @IBOutlet weak var labelName: UILabel!;
     @IBOutlet weak var labelViewers: UILabel!;
@@ -19,7 +26,20 @@ class DetailsViewController: UIViewController {
     
     //MARK: Methods
     @objc func addFavorite() {
+        let favorite = Favorites(context: context);
         
+        guard let game = games?.game else {
+            return;
+        }
+        favorite.id = Int32(game.id!);
+        favorite.name = game.name
+        favorite.image = game.image!.medium;
+        
+        do{
+            try context.save();
+        } catch{
+            print(error.localizedDescription);
+        }        
     }
     
     func setupDetailsGame(){
