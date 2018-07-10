@@ -4,9 +4,9 @@ class DetailsViewController: UIViewController {
     
     //MARK: Property   
     var games: Games?;
-    @IBOutlet weak var imageGame: UIImageView!
-    @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var labelViewers: UILabel!
+    @IBOutlet weak var imageGame: UIImageView!;
+    @IBOutlet weak var labelName: UILabel!;
+    @IBOutlet weak var labelViewers: UILabel!;
     
     //MARK: Lifecicle
     override func viewDidLoad() {
