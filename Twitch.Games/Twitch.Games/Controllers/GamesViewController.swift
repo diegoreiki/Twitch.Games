@@ -9,6 +9,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     var games: [Games] = [];    
     
     //MARK: Property
+    var refresh: UIRefreshControl!;
     
     //MARK: IBOutlet
     @IBOutlet weak var activityLoading: UIActivityIndicatorView!
@@ -20,7 +21,12 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         logoInNavigation();
         
         self.collectionViewTopGames.delegate = self;
-        self.collectionViewTopGames.dataSource = self;        
+        self.collectionViewTopGames.dataSource = self;  
+        
+        refresh = UIRefreshControl();
+        refresh.tintColor = UIColor.white;
+        refresh.addTarget(self, action: #selector(GamesViewController.refreshControl), for: UIControlEvents.valueChanged);
+        collectionViewTopGames.addSubview(refresh)        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,7 +37,12 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         activityLoading.hidesWhenStopped = true;
     }    
     
-    //MARK: Methods API
+    //MARK: Methods
+    @objc func refreshControl() {
+        getLastTopGames(refreshGames: true);
+        refresh.endRefreshing();
+    }     
+    
     func getLastTopGames(
         url: String = Constants.api + Constants.url.last + "?limit=20&offset=0&&client_id=" + Constants.client_id, refreshGames: Bool = false){
         Alamofire.request(url, method: .get).validate().responseJSON { (response) in
@@ -90,9 +101,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1);
     }
-    
-
-    
+        
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
         let lastCell = games.count - 1;
         
