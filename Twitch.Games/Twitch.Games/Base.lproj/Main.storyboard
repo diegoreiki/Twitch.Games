@@ -277,7 +277,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="18i-w5-hLb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="FavoriteOff" id="KII-M4-dOx"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TPs-lQ-24X">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TPs-lQ-24X">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
