@@ -1,8 +1,8 @@
 import UIKit
 
-class FilterGame: NSObject {
+class GameFilter: NSObject {
     
-    static var shared = FilterGame()
+    static var shared = GameFilter()
     
     func returnGamesFound(listGames: Array<Games>, text: String) -> Array<Games> {
         let listGamesFound = listGames.filter { (games) -> Bool in

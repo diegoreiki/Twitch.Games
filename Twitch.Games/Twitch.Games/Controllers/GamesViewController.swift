@@ -134,7 +134,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     //MARK: Delegate SearchBar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text{
-            games = FilterGame.shared.returnGamesFound(listGames: games, text: text)
+            games = GameFilter.shared.returnGamesFound(listGames: games, text: text)
             collectionViewTopGames.reloadData()
         }
     }
