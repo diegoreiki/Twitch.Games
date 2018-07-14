@@ -20,6 +20,10 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         listFavorites = FavoritesDAO.shared.getFavorites()
         self.collectionFavorite.reloadData()
+        
+        if listFavorites.count == 0{
+            collectionFavorite.isHidden = true
+        }        
     }
     
     //MARk: Delegate UICollectionView
