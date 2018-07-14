@@ -26,6 +26,7 @@
 		F10FAD1F20F45D4A009A876E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD1E20F45D4A009A876E /* DetailsViewController.swift */; };
 		F10FAD2320F46CCE009A876E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD2220F46CCE009A876E /* FavoriteViewController.swift */; };
 		F10FAD2520F46D1B009A876E /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD2420F46D1B009A876E /* FavoriteCollectionViewCell.swift */; };
+		F1FDA7F620FA4F9900D156EB /* FavoritesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		F10FAD1E20F45D4A009A876E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F10FAD2220F46CCE009A876E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		F10FAD2420F46D1B009A876E /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDAO.swift; sourceTree = "<group>"; };
 		FC0BBEEAD4ABD59AD02B827E /* Pods-Twitch.GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch.GamesTests/Pods-Twitch.GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 			children = (
 				F10FAD1420F44E2D009A876E /* Constants.swift */,
 				F10FAD1620F44FC3009A876E /* Extensions.swift */,
+				F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FDA7F620FA4F9900D156EB /* FavoritesDAO.swift in Sources */,
 				F10FAD1D20F455EF009A876E /* GameCollectionViewCell.swift in Sources */,
 				F10FAD1720F44FC3009A876E /* Extensions.swift in Sources */,
 				F10FAD1F20F45D4A009A876E /* DetailsViewController.swift in Sources */,
