@@ -16,10 +16,8 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var activityLoading: UIActivityIndicatorView!
     @IBOutlet weak var collectionViewTopGames: UICollectionView!    
     
-    func configuraSearch() {
-        self.searchController.searchBar.delegate = self
-        self.searchController.dimsBackgroundDuringPresentation = false
-        self.navigationItem.searchController = searchController
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return UIStatusBarStyle.lightContent
     }
     
     //MARK: Lifecicle
@@ -46,12 +44,17 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         activityLoading.hidesWhenStopped = true
     }
     
-    
     //MARK: Methods
     @objc func refreshControl() {
         getLastTopGames(refreshGames: true)
         refresh.endRefreshing()
-    }     
+    }    
+    
+    func configuraSearch() {
+        self.searchController.searchBar.delegate = self
+        self.searchController.dimsBackgroundDuringPresentation = false
+        self.navigationItem.searchController = searchController
+    }    
     
     func getLastTopGames(
         url: String = Constants.api + Constants.url.last + "?limit=20&offset=0&&client_id=" + Constants.client_id, refreshGames: Bool = false){
@@ -112,13 +115,13 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1)
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
-        let lastCell = games.count - 1
-        
-        if indexPath.row == lastCell {
-            self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id)
-        }
-    } 
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+//        let lastCell = games.count - 1
+//        
+//        if indexPath.row == lastCell {
+//            self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id)
+//        }
+//    } 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsGame") as! DetailsViewController
@@ -128,10 +131,14 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("teste")
+        if let text = searchBar.text{
+            games = FilterGame.shared.returnGamesFound(listGames: games, text: text)
+            collectionViewTopGames.reloadData()
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("test222e")
+        getLastTopGames(refreshGames: true)
     }
+ 
 }

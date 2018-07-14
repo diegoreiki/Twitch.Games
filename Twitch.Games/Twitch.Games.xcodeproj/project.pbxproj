@@ -27,6 +27,7 @@
 		F10FAD2320F46CCE009A876E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD2220F46CCE009A876E /* FavoriteViewController.swift */; };
 		F10FAD2520F46D1B009A876E /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10FAD2420F46D1B009A876E /* FavoriteCollectionViewCell.swift */; };
 		F1FDA7F620FA4F9900D156EB /* FavoritesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */; };
+		F1FDA7F820FA601200D156EB /* FilterGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDA7F720FA601200D156EB /* FilterGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		F10FAD2220F46CCE009A876E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		F10FAD2420F46D1B009A876E /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDAO.swift; sourceTree = "<group>"; };
+		F1FDA7F720FA601200D156EB /* FilterGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterGame.swift; sourceTree = "<group>"; };
 		FC0BBEEAD4ABD59AD02B827E /* Pods-Twitch.GamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.GamesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitch.GamesTests/Pods-Twitch.GamesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 				F10FAD1420F44E2D009A876E /* Constants.swift */,
 				F10FAD1620F44FC3009A876E /* Extensions.swift */,
 				F1FDA7F520FA4F9900D156EB /* FavoritesDAO.swift */,
+				F1FDA7F720FA601200D156EB /* FilterGame.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				F10FAD2520F46D1B009A876E /* FavoriteCollectionViewCell.swift in Sources */,
 				F10FAD1520F44E2D009A876E /* Constants.swift in Sources */,
 				F10FAD1920F450D6009A876E /* TopGames.swift in Sources */,
+				F1FDA7F820FA601200D156EB /* FilterGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

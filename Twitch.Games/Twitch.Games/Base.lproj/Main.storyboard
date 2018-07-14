@@ -19,16 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="E6l-hN-o7v">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="nmh-TT-us4">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mYc-hz-Bxw">
-                                <rect key="frame" x="0.0" y="130" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c6z-P7-yJp">
                                     <size key="itemSize" width="176" height="240"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -65,13 +60,10 @@
                         <constraints>
                             <constraint firstItem="nmh-TT-us4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="07X-SS-DNV"/>
                             <constraint firstItem="nmh-TT-us4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dg3-WP-5o4"/>
-                            <constraint firstItem="E6l-hN-o7v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LQ4-5p-AeF"/>
-                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Otl-q9-3XZ"/>
-                            <constraint firstItem="E6l-hN-o7v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UED-Pa-gkA"/>
-                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="top" secondItem="E6l-hN-o7v" secondAttribute="bottom" constant="10" id="XsV-UB-WZ7"/>
-                            <constraint firstItem="E6l-hN-o7v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e6R-wa-wgx"/>
-                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kUc-V0-rzX"/>
-                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="w9U-Gs-HWu"/>
+                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ObV-O5-bsY"/>
+                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TMb-qa-fet"/>
+                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cie-9X-sT6"/>
+                            <constraint firstItem="mYc-hz-Bxw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hUA-Cd-uk0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
