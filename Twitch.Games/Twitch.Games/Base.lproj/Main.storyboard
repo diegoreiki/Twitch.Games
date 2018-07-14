@@ -85,7 +85,7 @@
             </objects>
             <point key="canvasLocation" x="1736.8" y="468.21589205397305"/>
         </scene>
-        <!--Favorite View Controller-->
+        <!--Favoritos-->
         <scene sceneID="xDK-Vi-Axi">
             <objects>
                 <viewController id="uge-84-z6E" customClass="FavoriteViewController" customModule="Twitch_Games" customModuleProvider="target" sceneMemberID="viewController">
@@ -141,7 +141,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bM4-QA-Tjp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OjK-Wg-SI1"/>
+                    <navigationItem key="navigationItem" title="Favoritos" id="OjK-Wg-SI1"/>
                     <connections>
                         <outlet property="collectionFavorite" destination="vuk-Ea-kFN" id="vQJ-67-n0b"/>
                     </connections>
@@ -275,7 +275,7 @@
         <scene sceneID="LnM-eP-Ys2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="18i-w5-hLb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="FavoriteOff" id="KII-M4-dOx"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="Favorite" id="KII-M4-dOx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TPs-lQ-24X">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -292,7 +292,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FavoriteOff" width="24" height="24"/>
+        <image name="Favorite" width="24" height="24"/>
         <image name="HomeOff" width="24" height="24"/>
     </resources>
 </document>
