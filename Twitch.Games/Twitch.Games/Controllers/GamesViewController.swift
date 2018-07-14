@@ -115,13 +115,16 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
-//        let lastCell = games.count - 1
-//        
-//        if indexPath.row == lastCell {
-//            self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id)
-//        }
-//    } 
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+        
+        if !searchController.isActive{
+            let lastCell = games.count - 1
+            
+            if indexPath.row == lastCell {
+                self.getLastTopGames(url: (self.topGames?.links?.next)! + "&client_id=" + Constants.client_id)
+            }
+        }
+    } 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "detailsGame") as! DetailsViewController
