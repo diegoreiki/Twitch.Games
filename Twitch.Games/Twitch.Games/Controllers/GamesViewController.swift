@@ -130,6 +130,8 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    
+    //MARK: Delegate SearchBar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text{
             games = FilterGame.shared.returnGamesFound(listGames: games, text: text)
