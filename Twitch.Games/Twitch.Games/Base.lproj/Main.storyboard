@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,25 +32,42 @@
                                 </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellGame" id="m75-cz-Fe5" customClass="GameCollectionViewCell" customModule="Twitch_Games" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="176" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="176" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qI4-Mt-wfR">
+                                                    <rect key="frame" x="20" y="200" width="136" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="136" id="g7z-cY-f7c"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edM-gM-cbI">
-                                                    <rect key="frame" x="0.0" y="-4" width="176" height="248"/>
+                                                    <rect key="frame" x="20" y="0.0" width="136" height="190"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="190" id="NMQ-Zo-ruP"/>
+                                                        <constraint firstAttribute="width" constant="136" id="Sup-br-5RL"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.1843137255" green="0.67843137249999996" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="edM-gM-cbI" firstAttribute="centerY" secondItem="m75-cz-Fe5" secondAttribute="centerY" id="9kO-Dc-tAU"/>
-                                            <constraint firstItem="edM-gM-cbI" firstAttribute="centerX" secondItem="m75-cz-Fe5" secondAttribute="centerX" id="IJz-Qu-Re2"/>
-                                            <constraint firstItem="edM-gM-cbI" firstAttribute="top" secondItem="m75-cz-Fe5" secondAttribute="topMargin" constant="-12" id="eV9-tY-Sq6"/>
-                                            <constraint firstItem="edM-gM-cbI" firstAttribute="leading" secondItem="m75-cz-Fe5" secondAttribute="leadingMargin" constant="-8" id="ifK-iT-MwO"/>
+                                            <constraint firstItem="edM-gM-cbI" firstAttribute="top" secondItem="m75-cz-Fe5" secondAttribute="top" id="W6P-Bd-4C9"/>
+                                            <constraint firstAttribute="trailing" secondItem="edM-gM-cbI" secondAttribute="trailing" constant="20" id="f8F-CJ-g5f"/>
+                                            <constraint firstItem="qI4-Mt-wfR" firstAttribute="centerX" secondItem="m75-cz-Fe5" secondAttribute="centerX" id="g9j-c3-8WQ"/>
+                                            <constraint firstItem="edM-gM-cbI" firstAttribute="leading" secondItem="m75-cz-Fe5" secondAttribute="leading" constant="20" id="qsv-AZ-uvr"/>
+                                            <constraint firstItem="qI4-Mt-wfR" firstAttribute="top" secondItem="edM-gM-cbI" secondAttribute="bottom" constant="10" id="yje-Cp-A6N"/>
                                         </constraints>
+                                        <size key="customSize" width="176" height="280"/>
                                         <connections>
                                             <outlet property="imageGame" destination="edM-gM-cbI" id="rXs-mp-XHa"/>
+                                            <outlet property="labelName" destination="qI4-Mt-wfR" id="VcF-88-tbF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -120,29 +136,37 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellFavoriteGame" id="bwU-96-o1r" customClass="FavoriteCollectionViewCell" customModule="Twitch_Games" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="190"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="136" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Eq-xA-XVm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="136" height="190"/>
+                                                    <rect key="frame" x="20" y="0.0" width="136" height="190"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="136" id="aAX-T9-Het"/>
-                                                        <constraint firstAttribute="height" constant="190" id="uIh-vy-Ab2"/>
+                                                        <constraint firstAttribute="width" constant="136" id="cVL-r1-TcK"/>
+                                                        <constraint firstAttribute="height" constant="190" id="fux-go-ivJ"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nLr-hL-Uia">
+                                                    <rect key="frame" x="67" y="201" width="42" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.1843137255" green="0.67843137249999996" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="0Eq-xA-XVm" firstAttribute="leading" secondItem="bwU-96-o1r" secondAttribute="leading" id="74K-XZ-pVq"/>
-                                            <constraint firstItem="0Eq-xA-XVm" firstAttribute="top" secondItem="bwU-96-o1r" secondAttribute="top" id="BKf-mr-NLt"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Eq-xA-XVm" secondAttribute="bottom" id="HM6-Ji-amU"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Eq-xA-XVm" secondAttribute="trailing" id="rUf-8w-787"/>
+                                            <constraint firstItem="0Eq-xA-XVm" firstAttribute="centerX" secondItem="bwU-96-o1r" secondAttribute="centerX" id="swA-bJ-QH0"/>
+                                            <constraint firstItem="0Eq-xA-XVm" firstAttribute="top" secondItem="bwU-96-o1r" secondAttribute="top" id="txw-PR-52H"/>
                                         </constraints>
+                                        <size key="customSize" width="176" height="280"/>
                                         <connections>
                                             <outlet property="imageGame" destination="0Eq-xA-XVm" id="UnY-mk-tWD"/>
+                                            <outlet property="labelName" destination="nLr-hL-Uia" id="QQS-Jw-tqP"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
