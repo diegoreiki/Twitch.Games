@@ -25,7 +25,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         if listFavorites.count == 0{
             collectionFavorite.isHidden = true
         } else {
-            viewFavoriteEmpty.isHidden = true
+            collectionFavorite.isHidden = false
         }       
     }
     
@@ -53,6 +53,6 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
 //    }
 //    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 1, left: 5, bottom: 1, right: 5)
+        return UIEdgeInsets.init(top: 1, left: 2, bottom: 1, right: 2)
     }
 }
