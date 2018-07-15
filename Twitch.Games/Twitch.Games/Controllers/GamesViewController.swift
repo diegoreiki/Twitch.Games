@@ -23,25 +23,22 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     //MARK: Lifecicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         logoInNavigation()
+        activityLoading.startAnimating()
+        activityLoading.hidesWhenStopped = true        
         
-        self.configuraSearch()
+        configuraSearch()
+        getLastTopGames()
         
-        getLastTopGames();
-        self.collectionViewTopGames.delegate = self
-        self.collectionViewTopGames.dataSource = self;
+        collectionViewTopGames.delegate = self
+        collectionViewTopGames.dataSource = self
         
         refresh = UIRefreshControl()
         refresh.tintColor = UIColor.white
         refresh.addTarget(self, action: #selector(GamesViewController.refreshControl), for: UIControlEvents.valueChanged)
-        collectionViewTopGames.addSubview(refresh)        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         
-        activityLoading.startAnimating()
-        activityLoading.hidesWhenStopped = true
+        collectionViewTopGames.addSubview(refresh)        
     }
     
     //MARK: Methods
