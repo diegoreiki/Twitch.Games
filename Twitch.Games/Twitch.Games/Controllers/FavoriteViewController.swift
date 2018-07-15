@@ -7,6 +7,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     //MARK: IBOutlet
     @IBOutlet weak var collectionFavorite: UICollectionView!    
+    @IBOutlet weak var viewFavoriteEmpty: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,9 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         if listFavorites.count == 0{
             collectionFavorite.isHidden = true
-        }        
+        } else {
+            viewFavoriteEmpty.isHidden = true
+        }       
     }
     
     //MARk: Delegate UICollectionView
@@ -49,7 +52,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        return CGSize(width: itemWidth, height: itemHeight);
 //    }
 //    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1);
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 1, left: 5, bottom: 1, right: 5)
+    }
 }

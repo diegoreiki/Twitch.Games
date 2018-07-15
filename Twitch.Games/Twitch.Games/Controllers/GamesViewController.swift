@@ -110,9 +110,9 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
 //        return CGSize(width: itemWidth, height: itemHeight)
 //    }
 //    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets.init(top: 1, left: 1, bottom: 1, right: 1)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 1, left: 5, bottom: 1, right: 5)
+    }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
         
