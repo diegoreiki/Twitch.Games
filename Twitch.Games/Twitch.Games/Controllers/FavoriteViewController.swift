@@ -33,7 +33,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFavoriteGame", for: indexPath) as! FavoriteCollectionViewCell
-        cell.labelName.text = listFavorites[indexPath.row].name
+        cell.labelName.text = listFavorites[indexPath.row].name!
         let imageURL = URL(string: listFavorites[indexPath.row].image!)
         let imageData = NSData(contentsOf: imageURL!)
         cell.imageGame.image = UIImage(data: imageData! as Data)
