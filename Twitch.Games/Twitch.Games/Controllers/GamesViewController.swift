@@ -48,7 +48,6 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     //MARK: Methods
     @IBAction func buttonGamesReload(_ sender: UIButton) {
-        print("teste")
         getLastTopGames()
     }
     
@@ -58,9 +57,10 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     }    
     
     func configuraSearch() {
-        self.searchController.searchBar.delegate = self
-        self.searchController.dimsBackgroundDuringPresentation = false
-        self.navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+        searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        navigationItem.searchController = searchController
     }    
     
     func getLastTopGames(
