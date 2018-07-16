@@ -24,7 +24,7 @@ class DetailsViewController: UIViewController {
     
     //MARK: Methods
     @objc func addFavorite() {
-        
+
         guard let game = game else { return }
         FavoritesDAO.shared.addFavorite(game: game)
         setButtonAddFavorite(status: false)
