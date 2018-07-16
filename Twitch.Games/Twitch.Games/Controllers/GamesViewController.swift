@@ -13,6 +13,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
     var refresh: UIRefreshControl!
     
     //MARK: IBOutlet
+    @IBOutlet weak var viewGamesEmpty: UIView!
     @IBOutlet weak var activityLoading: UIActivityIndicatorView!
     @IBOutlet weak var collectionViewTopGames: UICollectionView!    
     
@@ -41,7 +42,16 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         collectionViewTopGames.addSubview(refresh)        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)  
+    }
+    
     //MARK: Methods
+    @IBAction func buttonGamesReload(_ sender: UIButton) {
+        print("teste")
+        getLastTopGames()
+    }
+    
     @objc func refreshControl() {
         getLastTopGames(refreshGames: true)
         refresh.endRefreshing()
@@ -73,12 +83,16 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
                     }                    
                 }
                 
+                self.viewGamesEmpty.isHidden = true
+                self.collectionViewTopGames.isHidden = false
+                
                 self.activityLoading.stopAnimating()
                 self.collectionViewTopGames.reloadData()
             case .failure:
-                
                 self.alert(title: Constants.message.warning, message: Constants.message.no_connection, view: self, callback: {
                     self.activityLoading.stopAnimating()
+                    self.viewGamesEmpty.isHidden = false
+                    self.collectionViewTopGames.isHidden = true                    
                     return
                 });
             }
@@ -102,14 +116,7 @@ class GamesViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         return cell;
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let itemWidth = collectionView.bounds.width/2.1
-//        let itemHeight = itemWidth
-//        
-//        return CGSize(width: itemWidth, height: itemHeight)
-//    }
-//    
+      
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 1, left: 3, bottom: 1, right: 3)
     }

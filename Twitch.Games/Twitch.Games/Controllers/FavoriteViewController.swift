@@ -20,13 +20,13 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewWillAppear(true)
         
         listFavorites = FavoritesDAO.shared.getFavorites()
-        self.collectionFavorite.reloadData()
         
         if listFavorites.count == 0{
             collectionFavorite.isHidden = true
         } else {
             collectionFavorite.isHidden = false
-        }       
+        }
+        collectionFavorite.reloadData()
     }
     
     //MARk: Delegate UICollectionView
@@ -37,21 +37,17 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFavoriteGame", for: indexPath) as! FavoriteCollectionViewCell
         cell.labelName.text = listFavorites[indexPath.row].name!
-        let imageURL = URL(string: listFavorites[indexPath.row].image!)
-        let imageData = NSData(contentsOf: imageURL!)
-        cell.imageGame.image = UIImage(data: imageData! as Data)
-        cell.imageGame.clipsToBounds = false
-        cell.imageGame.contentMode = .top      
+
+        if let imageURL = URL(string: listFavorites[indexPath.row].image!){
+            let imageData = NSData(contentsOf: imageURL)
+            cell.imageGame.image = UIImage(data: imageData! as Data)
+            cell.imageGame.clipsToBounds = false
+            cell.imageGame.contentMode = .top            
+        }
+      
         return cell
     }   
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let itemWidth = collectionView.bounds.width/2.1;
-//        let itemHeight = itemWidth;
-//        
-//        return CGSize(width: itemWidth, height: itemHeight);
-//    }
-//    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.init(top: 1, left: 2, bottom: 1, right: 2)
     }

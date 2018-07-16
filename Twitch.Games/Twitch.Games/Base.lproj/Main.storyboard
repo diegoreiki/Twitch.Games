@@ -19,6 +19,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyb-9y-cbp" userLabel="viewGamesEmpty">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houve um erro na busca dos últimos jogos, verique sua conexão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWA-ZQ-37V">
+                                        <rect key="frame" x="30" y="404" width="314" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoInternet" translatesAutoresizingMaskIntoConstraints="NO" id="QlN-hY-hXs">
+                                        <rect key="frame" x="112" y="234" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QlN-hY-hXs" secondAttribute="height" multiplier="1:1" id="8M4-Zz-FlV"/>
+                                            <constraint firstAttribute="width" constant="150" id="JMo-Kl-E55"/>
+                                            <constraint firstAttribute="height" constant="150" id="VBl-17-fkW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrQ-zl-xoS">
+                                        <rect key="frame" x="62" y="490" width="250" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                        <state key="normal" title="Recarregar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonGamesReload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iQn-ao-HdL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QWA-ZQ-37V" firstAttribute="leading" secondItem="zyb-9y-cbp" secondAttribute="leading" constant="30" id="1fp-Jz-LrA"/>
+                                    <constraint firstItem="QlN-hY-hXs" firstAttribute="centerX" secondItem="zyb-9y-cbp" secondAttribute="centerX" id="KQS-Ok-sMM"/>
+                                    <constraint firstItem="QlN-hY-hXs" firstAttribute="centerY" secondItem="zyb-9y-cbp" secondAttribute="centerY" id="k1m-RH-LTI"/>
+                                    <constraint firstItem="QWA-ZQ-37V" firstAttribute="top" secondItem="QlN-hY-hXs" secondAttribute="bottom" constant="20" id="ql6-Dl-XTR"/>
+                                    <constraint firstAttribute="trailing" secondItem="QWA-ZQ-37V" secondAttribute="trailing" constant="31" id="wb1-cM-qh5"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mYc-hz-Bxw">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c6z-P7-yJp">
@@ -76,10 +115,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zyb-9y-cbp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="74N-L1-3dx"/>
+                            <constraint firstItem="zyb-9y-cbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A3N-D7-77c"/>
                             <constraint firstItem="mYc-hz-Bxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ObV-O5-bsY"/>
                             <constraint firstItem="mYc-hz-Bxw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TMb-qa-fet"/>
                             <constraint firstItem="mYc-hz-Bxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cie-9X-sT6"/>
                             <constraint firstItem="mYc-hz-Bxw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hUA-Cd-uk0"/>
+                            <constraint firstItem="zyb-9y-cbp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j0B-OM-fqn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zyb-9y-cbp" secondAttribute="bottom" id="tHC-sQ-RzV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -87,6 +130,7 @@
                     <connections>
                         <outlet property="activityLoading" destination="nmh-TT-us4" id="0jp-DF-ENZ"/>
                         <outlet property="collectionViewTopGames" destination="mYc-hz-Bxw" id="djP-Oj-OZn"/>
+                        <outlet property="viewGamesEmpty" destination="zyb-9y-cbp" id="UrU-oY-R60"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -350,5 +394,6 @@
         <image name="EmptyFavorite" width="256" height="256"/>
         <image name="Favorite" width="24" height="24"/>
         <image name="HomeOff" width="24" height="24"/>
+        <image name="NoInternet" width="64" height="64"/>
     </resources>
 </document>
