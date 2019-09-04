@@ -1,5 +1,5 @@
 # Twitch.Games
-Aplicativo tem o objetivo de listar os últimos jogos da Twitch. Também é possível favoritar seus jogos offline e ter acesso aos detalhes do jogo selecionado<br /><br />
+Aplicativo tem o objetivo de listar os últimos jogos da Twitch. Também é possível favoritar seus jogos offline e ter acesso aos detalhes do jogo selecionado<br /><br /> Foi utilizada a API de desenvolvedores da Twitch Games
 
 # Linguagem
 - Swift 3
